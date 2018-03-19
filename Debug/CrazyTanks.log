@@ -1,8 +1,5 @@
-﻿  PlayerClass.cpp
-  Enemy.cpp
-  CrazyTanks.cpp
+﻿  CrazyTanks.cpp
 d:\crazytanks\crazytanks\crazytanks.cpp(12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 d:\crazytanks\crazytanks\crazytanks.cpp(95): warning C4018: <: несоответствие типов со знаком и без знака
-  Создание кода...
   CrazyTanks.vcxproj -> D:\CrazyTanks\Debug\CrazyTanks.exe
   CrazyTanks.vcxproj -> D:\CrazyTanks\Debug\CrazyTanks.pdb (Full PDB)

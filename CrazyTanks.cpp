@@ -80,14 +80,14 @@ int main()
 		cout << "Lives:" << pl.lives << endl;
 		cout << "Scores:" << pl.scores << endl;
 		cout << "Seconds played:" << clock() / 1000.0 << endl;
-		int gt = _getch();
-		if (gt == 32)
+		//int gt = _getch();
+		if (_getch() == 32)
 		{
 			pl.shoot(mp, st, lim);
 		}
 		else
 		{
-			pl.move(gt, mp, st, lim);
+			pl.move(_getch(), mp, st, lim);
 			en.move(mp, pl.Getx(), pl.Gety(), st, lim, pl);
 			en2.move(mp, pl.Getx(), pl.Gety(), st, lim, pl);
 			en3.move(mp, pl.Getx(), pl.Gety(), st, lim, pl);
