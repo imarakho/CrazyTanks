@@ -14,8 +14,8 @@ void Player::shoot(int ** m, vector<shot> &sht,const int lim)
 	shot s;
 	if (side == 75 && x > 0)
 	{
-		if (m[y][x - 1] != 0 || m[y][x - 1] == 1)
-			return;
+		if (m[y][x - 1] == -2)
+			scores += 100;
 		s.dir = 1;
 		s.x = x - 1;
 		s.y = y;
@@ -24,8 +24,8 @@ void Player::shoot(int ** m, vector<shot> &sht,const int lim)
 	}
 	else if (side == 72 && y > 0)
 	{
-		if (m[y - 1][x] != 0 || m[y - 1][x] == 1)
-			return;
+		if (m[y - 1][x] == -2)
+			scores += 100;
 		s.dir = 2;
 		s.x = x;
 		s.y = y - 1;
@@ -34,8 +34,8 @@ void Player::shoot(int ** m, vector<shot> &sht,const int lim)
 	}
 	else if (side == 77 && x < lim)
 	{
-		if (m[y][x + 1] != 0 || m[y][x + 1] == 1)
-			return;
+		if (m[y][x + 1] == -2)
+			scores += 100;
 		s.dir = 3;
 		s.x = x + 1;
 		s.y = y;
@@ -44,10 +44,8 @@ void Player::shoot(int ** m, vector<shot> &sht,const int lim)
 	}
 	else if (side == 80 && y + 1 < lim)
 	{
-		if (m[y + 1][x] != 0 || m[y + 1][x] == 1)
-		{
-			return;
-		}
+		if (m[y + 1][x] == -2)
+			scores += 100;
 		s.dir = 4;
 		s.x = x;
 		s.y = y + 1;

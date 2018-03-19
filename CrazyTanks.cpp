@@ -29,7 +29,7 @@ int main()
 	mp[pl.Gety()][pl.Getx()] = -1;
 	int x;
 	int y;
-	for (int i = 0; i < 15; i++)
+	for (int i = 0; i < 22; i++)
 	{
 		x = rand() % 18 + 1;
 		y = rand() % 18 + 1;
@@ -80,13 +80,12 @@ int main()
 		cout << "Lives:" << pl.lives << endl;
 		cout << "Scores:" << pl.scores << endl;
 		cout << "Seconds played:" << clock() / 1000.0 << endl;
-		//int gt = _getch();
 		if (_getch() == 32)
 		{
 			pl.shoot(mp, st, lim);
 		}
 		else
-		{
+		{ 
 			pl.move(_getch(), mp, st, lim);
 			en.move(mp, pl.Getx(), pl.Gety(), st, lim, pl);
 			en2.move(mp, pl.Getx(), pl.Gety(), st, lim, pl);
